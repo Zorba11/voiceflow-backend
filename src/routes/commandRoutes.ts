@@ -1,20 +1,8 @@
 import express, { Request, Response } from "express";
+import commandController from "../controllers/commandController";
 
 const router = express.Router();
 
-router.get("/process-command", (req: Request, res: Response) => {
-  // Process the command and generate actions
-  // const actions = processCommand(req.body.command);
-
-  const actions = {
-    type: "message",
-    message: "Hello, world!",
-  };
-
-  console.log("Command received:", req.body.command);
-
-  // Return the actions
-  res.send(actions).status(200);
-});
+router.get("/process-command", commandController.processCommand);
 
 export default router;
