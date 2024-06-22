@@ -3,6 +3,6 @@ import commandController from "../controllers/commandController";
 
 const router = express.Router();
 
-router.get("/process-command", commandController.processCommand);
+router.post("/process-command", commandController.processCommand);
 
 export default router;

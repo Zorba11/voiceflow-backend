@@ -1,0 +1,76 @@
+[
+  {
+  "intent": "navigate",
+  "action": "CLICK",
+  "target": "a[href='/contacts'], button:contains('Contacts')"
+  },
+  {
+    "intent": "read",
+    "action": "READ",
+    "target": "article.main-content, div.article-body"
+  },
+  {
+    "intent": "fillForm",
+    "action": "FILL_FORM",
+    "target": "input[type='email'], input[name='email']",
+    "additionalInfo": {
+      "value": "user@example.com"
+    }
+  },
+  {
+    "intent": "scroll",
+    "action": "SCROLL",
+    "target": "#comments, .comments-section"
+  },
+  {
+    "intent": "search",
+    "action": "FILL_FORM",
+    "target": "input[type='search'], input[name='q']",
+    "additionalInfo": {
+      "value": "leather shoes",
+      "submitSelector": "button[type='submit'], input[type='submit']"
+    }
+  },
+  {
+    "intent": "interact",
+    "action": "CLICK",
+    "target": "button:contains('Add to Cart'), .add-to-cart-button"
+  },
+  {
+    "intent": "customAction",
+    "action": "CUSTOM",
+    "target": ".color-options",
+    "additionalInfo": {
+      "action": "selectColor",
+      "color": "blue"
+    }
+  },
+  {
+    "intent": "login",
+  "action": "CUSTOM",
+  "additionalInfo": {
+    "steps": [
+      {
+        "action": "CLICK",
+        "target": "a:contains('Login'), .login-button"
+      },
+      {
+        "action": "FILL_FORM",
+        "target": "input[name='username']",
+        "value": "${USERNAME}"
+      },
+      {
+        "action": "FILL_FORM",
+        "target": "input[name='password']",
+        "value": "${PASSWORD}"
+      },
+      {
+        "action": "CLICK",
+        "target": "button[type='submit'], input[type='submit']"
+      }
+    ]
+  }
+  }
+
+
+]
